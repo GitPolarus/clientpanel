@@ -126,6 +126,16 @@
               "devServerTarget": "clientpanel:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "clientpanel:build:production",
+            "firebaseProject": "clientpanelprod-58676",
+            "firebaseHostingSite": "clientpanelprod-58676"
+          }
         }
       }
     }
