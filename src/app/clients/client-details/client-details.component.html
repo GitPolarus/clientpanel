@@ -1,1 +1,34 @@
-<p>client-details works!</p>
+<div class="row">
+    <div class="col-md-6">
+        <a routerLink="/" class="btn btn-link"> <i class="fa fa-arrow-circle-o-left"></i> Back To DashBoard</a>
+    </div>
+    <div class="col-md-6">
+        <div class="btn btn-group pull-right">
+            <a routerLink="/client/edit/{{id}}" class="btn btn-dark">Edit</a>
+            <button class="btn btn-danger">delete</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="client.id!=''" class="card">
+    <div class="card-header">
+        {{client.firstName}} {{client.lastName}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-8 col-sm-6">
+                <h4>Client ID : {{client.id}} </h4>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                @Todo Balance
+            </div>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                Email: {{client.email}}
+            </li>
+            <li class="list-group-item">
+                Phone: {{client.phone}}
+            </li>
+        </ul>
+    </div>
+</div>

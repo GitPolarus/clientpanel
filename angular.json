@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "angular2-flash-messages"
+            ],
             "outputPath": "dist/clientpanel",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -129,13 +132,7 @@
         },
         "deploy": {
           "builder": "@angular/fire:deploy",
-          "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "clientpanel:build:production",
-            "firebaseProject": "clientpanelprod-58676",
-            "firebaseHostingSite": "clientpanelprod-58676"
-          }
+          "options": {}
         }
       }
     }
